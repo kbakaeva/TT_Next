@@ -18,7 +18,7 @@ export const getStyle = () => {
       shadowOffset: { width: 3, height: 3 },
       shadowOpacity: 0.2,
       shadowRadius: 4,
-      elevation: 8,
+      elevation: 2,
       fontSize: 24,
       lineHeight: 28,
     },
@@ -35,7 +35,7 @@ export const getStyle = () => {
       shadowOffset: { width: 3, height: 3 },
       shadowOpacity: 0.2,
       shadowRadius: 4,
-      elevation: 8,
+      elevation: 2,
     },
     btnText: {
       color: '#FFFFFF',

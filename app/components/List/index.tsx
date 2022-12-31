@@ -14,7 +14,6 @@ export const List: FC = () => {
       data={todos}
       renderItem={({ item }) => <Item {...{ item }} />}
       keyExtractor={item => item.id}
-      contentContainerStyle={styles.itemStyle}
     />
   );
 };

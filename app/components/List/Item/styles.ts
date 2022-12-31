@@ -11,6 +11,11 @@ export const getStyle = () => {
       backgroundColor: 'white',
       padding: 8,
       width: '98%',
+      shadowColor: '#171717',
+      shadowOffset: { width: 3, height: 3 },
+      shadowOpacity: 0.2,
+      shadowRadius: 4,
+      elevation: 2,
     },
     title: {
       marginLeft: 10,
