@@ -7,7 +7,7 @@ import { List } from '../../components/List';
 import { PlusIcon } from '../../assets/plusIcon';
 import { getStyle } from './styles';
 
-export const TodoScreen: FC<Props> = () => {
+export const TodoScreen: FC = () => {
   const styles = useMemo(() => getStyle(), []);
   const navigation: IStackNavigation = useNavigation();
   const onPress = () => {

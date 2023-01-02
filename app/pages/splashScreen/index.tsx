@@ -1,20 +1,25 @@
-import React, { FC, useMemo, useEffect } from 'react';
-import { View } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
+import React, { FC, useMemo } from 'react';
+import { View, ActivityIndicator } from 'react-native';
+import { IStackNavigation } from '../../types/IStackNavigation';
 import { LogoIcon } from '../../assets/logoIcon';
-import { launcher } from '../../redux/launcher/actions';
 import { getStyle } from './styles';
 
-export const SplashScreen: FC<Props> = ({ }) => {
+export const SplashScreen: FC = () => {
   const styles = useMemo(() => getStyle(), []);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(launcher());
-  }, []);
+  const navigation: IStackNavigation = useNavigation();
+
+  const onTodo = () => {
+    return navigation.navigate('TodoScreen');
+  };
+  setTimeout(onTodo, 2000);
 
   return (
     <View style={styles.container}>
-      <LogoIcon />
+      <View style={styles.iconWrapper}>
+        <LogoIcon />
+      </View>
+      <ActivityIndicator size={'large'} color={'#FF003C'} />
     </View>
   );
 };

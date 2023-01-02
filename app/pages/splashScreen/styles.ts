@@ -7,6 +7,9 @@ export const getStyle = () => {
       justifyContent: 'center',
       alignItems: 'center',
     },
+    iconWrapper: {
+      marginBottom: 10,
+    },
   });
   return styles;
 };
